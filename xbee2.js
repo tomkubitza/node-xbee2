@@ -28,8 +28,11 @@ function getBytesFromAddress(address, size) {
 	}else{
 		var number = (typeof address === 'number') ? address : parseInt(address, 16);
 		if(typeof number === 'number')
-			for(var i = size-1; i >= 0; i --)
-				bytes.push((number >> (i*8)) & 0xFF);
+			for(var i = 0; i < size; i ++) {
+				bytes.push(number % 256);
+				number = Math.floor(number / 256);
+			}
+		bytes.reverse();
 	}
 	while(bytes.length < size)
 		bytes.push(0x00);
@@ -221,7 +224,7 @@ exports.openPort = function(url, options) {
 		this.write(data);
 	}
 
-	port.ATCommand = function(command, parameters) {
+	port.AT = function(command, parameters) {
 		var content = [command.charCodeAt(0), command.charCodeAt(1)];
 		
 		if(parameters)
@@ -247,7 +250,7 @@ exports.openPort = function(url, options) {
 		this.SendPacket(0x10, content);
 	};
 
-	port.RemoteATCommand = function(destination64, destination16, command, parameters, options) {
+	port.RemoteAT = function(destination64, destination16, command, parameters, options) {
 		var content = getBytesFromAddress(destination64, 8).concat(getBytesFromAddress(destination16, 2));
 	
 		content.push((options == null) ? 0x02 : options);
