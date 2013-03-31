@@ -1,0 +1,20 @@
+{
+  "name": "xbee2",
+  "version": "0.0.1",
+  "description": "Node talks to xbee series 2 radios through serialport",
+  "author": {
+    "name": "Alexander Meissner",
+    "email": "AlexanderMeissner@gmx.net",
+    "url": "gamefortec.net"
+  },
+  "dependencies": {
+    "serialport": ">= 1.1.0"
+  },
+  "main": "./xbee2",
+  "homepage": "https://github.com/lichtso/node-xbee2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lichtso/node-xbee2.git"
+  },
+  "readmeFilename": "README.md"
+}
