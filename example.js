@@ -9,8 +9,8 @@ myXbee.on('data', function(data) {
 myXbee.on('open', function() {
 	console.log('Xbee is now open');
 	
-	myXbee.ATCommand('CH');
-	myXbee.ATCommand('ID');
-	myXbee.ATCommand('MY');
+	myXbee.AT('CH');
+	myXbee.AT('ID');
+	myXbee.AT('MY');
 	myXbee.TransmitData('0013A20040A6299D', 'FFFE', 'Hello World');
 });
