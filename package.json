@@ -5,16 +5,16 @@
   "author": {
     "name": "Alexander Meissner",
     "email": "AlexanderMeissner@gmx.net",
-    "url": "gamefortec.net"
+    "url": "http://gamefortec.net/"
   },
   "dependencies": {
     "serialport": ">= 1.1.0"
   },
   "main": "./xbee2",
-  "homepage": "https://github.com/lichtso/node-xbee2",
+  "homepage": "https://github.com/Lichtso/node-xbee2",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lichtso/node-xbee2.git"
+    "url": "git://github.com/Lichtso/node-xbee2.git"
   },
   "readmeFilename": "README.md"
 }
