@@ -7,9 +7,19 @@
     "email": "AlexanderMeissner@gmx.net",
     "url": "http://gamefortec.net/"
   },
+  "keywords": [
+    "xbee",
+    "zigbee"
+  ],
   "dependencies": {
     "serialport": ">= 1.1.0"
   },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Lichtso/node-xbee2/raw/master/LICENSE"
+    }
+  ],
   "main": "./xbee2",
   "homepage": "https://github.com/Lichtso/node-xbee2",
   "repository": {
