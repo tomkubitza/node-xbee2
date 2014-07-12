@@ -166,7 +166,7 @@ function formatPacket(packet) {
 	}
 }
 
-exports.openPort = function(url, options) {
+exports.openPort = function(url, options, callback) {
 	var packet = null;
 
 	options['parser'] = function(emitter, buffer) {
@@ -202,7 +202,10 @@ exports.openPort = function(url, options) {
 		}
 	};
 
-	var port = new SerialPort(url, options);
+	var port = new SerialPort(url, options, false);
+	port.open(function(err){
+		callback(err);
+	});
 
 	port.frameId = 0;
 	port.SendPacket = function(type, content) {
