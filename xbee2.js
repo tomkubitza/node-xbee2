@@ -202,11 +202,8 @@ exports.openPort = function(url, options, callback) {
 		}
 	};
 
-	var port = new SerialPort(url, options, false);
-	port.open(function(err){
-		callback(err);
-	});
-
+	var port = new SerialPort(url, options, true, callback);
+    
 	port.frameId = 0;
 	port.SendPacket = function(type, content) {
 		var data = [0x7E], length = content.length + 2;
