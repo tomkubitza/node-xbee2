@@ -1,6 +1,6 @@
 {
   "name": "xbee2",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node talks to xbee series 2 radios through serialport",
   "author": {
     "name": "Alexander Meissner",
